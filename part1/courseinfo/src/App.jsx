@@ -23,9 +23,11 @@ const Content = (props) => {
 }
 
 const Total = (props) => {
+  const total = props.parts.reduce((accumulator, current) => accumulator + current.exercises, 0)
+
   return (
     <p>
-      {props.parts[0].exercises + props.parts[1].exercises + props.parts[2].exercises}
+      {total}
     </p>
   )
 }
